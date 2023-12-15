@@ -7712,6 +7712,9 @@ $$∑_j x_{j, source} == 0 $$<ul>
 <li>Sink in null: restrict the sink to not be able to send flow</li>
 </ul>
 $$∑_j x_{sink, j} == 0 $$
+where
+$$\forall x_{ij} ∈ N \cup {0} $$
+$$\forall y_{ij} ∈ N \cup {0} $$
 </div>
 </div>
 </div>
@@ -7967,7 +7970,12 @@ $$x_{i, i-1}^2 \leq x_{i-1, i-1}$$<ul>
 <li><strong>NEW</strong> Buffer max: the square of the flow from one router to another is less than or equal to the inflow divided by the total number of edges connected to router first router. The reason for this constraints is to add a buffer to the routers. Each router usually has a buffer so it can store packets when it is sending others, for this case we limit the flwo into that router by limiting the inflow to it.</li>
 </ul>
 $$x_{i, j}^2 \leq \frac{{\text{{inflow}}}}{{\text{{edges}}}}$$<p>where
-$$\text{{inflow}} = \sum_{k \in N} capacity_{k, i} \quad \text{and} \quad \text{{edges}} = \sum_{k \in N} connected_{k, i}$$</p>
+$$\text{{inflow}} = \sum_{k \in N} capacity_{k, i} \quad \text{and} \quad \text{{edges}} = \sum_{k \in N} connected_{k, i}$$
+
+where
+$$\forall x_{ij} ∈ N \cup {0} $$
+$$\forall y_{ij} ∈ N \cup {0} $$
+</p>
 </div>
 </div>
 </div>
